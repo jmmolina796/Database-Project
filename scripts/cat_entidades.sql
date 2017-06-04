@@ -1,10 +1,9 @@
 CREATE TABLE cat_entidades(
-	id_entidad INT NOT NULL,
+	id_entidad SERIAL NOT NULL,
 	clave VARCHAR(2) NOT NULL,
 	entidad VARCHAR(20) NOT NULL,
 	PRIMARY KEY(id_entidad),
-	UNIQUE (id_entidad),
-	SERIAL (id_entidad)
+	UNIQUE (id_entidad)
 );
 
 INSERT INTO cat_entidades (clave,entidad) 
