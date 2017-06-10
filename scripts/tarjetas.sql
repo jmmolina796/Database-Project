@@ -1,5 +1,6 @@
--- Tables: cuentas
+-- Tables: cuentas, cat_bancos, tarjetas
 -- Functions: randomNumber
+
 
 CREATE OR REPLACE FUNCTION generateTarjetas() RETURNS VOID AS $$
 DECLARE
