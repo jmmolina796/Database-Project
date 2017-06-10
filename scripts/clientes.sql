@@ -83,13 +83,13 @@ CREATE OR REPLACE FUNCTION curp(f_last_name VARCHAR, m_last_name VARCHAR, name V
 		END IF;
 
 		--Avoid duplication
-		number_dup_req := LPAD( (COUNT(*) + 1)::VARCHAR, 2, '0') FROM clientes WHERE LEFT(curp, 16) = curp_generated;
+		--number_dup_req := LPAD( (COUNT(*) + 1)::VARCHAR, 2, '0') FROM clientes WHERE LEFT(curp, 16) = curp_generated;
 
 		--Avoid duplication
-		--number_dup_req := randomNumber(0,9);
+		number_dup_req := randomNumber(0,9);
 
 		--Random number
-		--random_number_req := randomNumber(0,9);
+		random_number_req := randomNumber(0,9);
 
 		curp_generated := curp_generated || number_dup_req::VARCHAR;
 
