@@ -3,8 +3,8 @@ CREATE DATABASE project;
 /* Types */
 
 CREATE TYPE sexo_cliente AS ENUM('M', 'H');
-CREATE TYPE tipo_tarjeta AS ENUM(1, 2);
-CREATE TYPE tipo_movimiento AS ENUM(1, 2);
+CREATE TYPE tipo_tarjeta AS ENUM('1', '2');
+CREATE TYPE tipo_movimiento AS ENUM('1', '2');
 
 /* Types */
 
@@ -82,10 +82,10 @@ CREATE TABLE cuentas(
 
 --tarjeta
 CREATE TABLE tarjetas(
-	num_tarjeta int NOT NULL,
+	num_tarjeta INT NOT NULL,
 	num_cuenta INT NOT NULL,
 	saldo INT NOT NULL,
-	limite INT NOT NULL,
+	limite INT,
 	tipo tipo_tarjeta NOT NULL,
 	PRIMARY KEY(num_tarjeta),
 	UNIQUE(num_cuenta),
