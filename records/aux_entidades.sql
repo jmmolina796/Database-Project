@@ -1,12 +1,4 @@
-CREATE TABLE cat_entidades(
-	id_entidad SERIAL NOT NULL,
-	clave VARCHAR(2) NOT NULL,
-	entidad VARCHAR(20) NOT NULL,
-	PRIMARY KEY(id_entidad),
-	UNIQUE (id_entidad)
-);
-
-INSERT INTO cat_entidades (clave,entidad) 
+INSERT INTO aux_entidades (clave, entidad) 
 VALUES  ('AS','AGUASCALIENTES'),
 		('BC','BAJA CALIFORNIA'),
 		('BS','BAJA CALIFORNIA SUR'),
@@ -39,5 +31,3 @@ VALUES  ('AS','AGUASCALIENTES'),
 		('VZ','VERACRUZ'),
 		('YN','YUCATAN'),
 		('ZS','ZACATECAS');
-
-

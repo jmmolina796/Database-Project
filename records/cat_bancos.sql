@@ -1,4 +1,4 @@
-INSERT INTO cat_bancos(id_banco,nombre,id_tarjeta) 
+INSERT INTO cat_bancos(id_banco, nombre, id_tarjeta) 
 VALUES  (35150418,'BANAMEX',420),
 		(92692960,'BBVA BANCOMER',143),
 		(59669970,'SANTANDER',284),
