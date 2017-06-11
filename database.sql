@@ -84,7 +84,7 @@ CREATE TABLE cuentas(
 CREATE TABLE tarjetas(
 	num_tarjeta INT NOT NULL,
 	num_cuenta INT NOT NULL,
-	saldo INT NOT NULL,
+	saldo REAL NOT NULL,
 	limite INT,
 	tipo tipo_tarjeta NOT NULL,
 	PRIMARY KEY(num_tarjeta),
@@ -98,12 +98,12 @@ CREATE TABLE tarjetas(
 --movimientos
 CREATE TABLE movimientos(
 	num_tarjeta INT NOT NULL,
-	fecha DATETIME NOT NULL,
+	fecha TIMESTAMP NOT NULL,
 	tipo tipo_movimiento NOT NULL,
 	importe REAL NOT NULL,
 	PRIMARY KEY(num_tarjeta, fecha),
 	CHECK(num_tarjeta > 0 ),
-	CHECK(importe > 0 ),
+	CHECK(importe >= 0 ),
 	FOREIGN KEY(num_tarjeta) REFERENCES tarjetas(num_tarjeta)
 );--importe
 
